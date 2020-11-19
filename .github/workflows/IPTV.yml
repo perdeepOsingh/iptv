@@ -10,4 +10,4 @@ jobs:
     steps:
       - name: Download
         run: |
-          wget -0 IPTV.m3u http://m3u4u.com/m3u/x79znkermetgpvkngk24
+          wget -O IPTV.m3u http://m3u4u.com/m3u/x79znkermetgpvkngk24
