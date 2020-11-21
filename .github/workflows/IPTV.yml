@@ -17,9 +17,9 @@ jobs:
         uses: 6d13dd6e8268d846bf555017dc3508d9
         with:
           # Set a generated TOKEN for updating gist.
-          token: 88067b4f8b385591eb44bee62334e74570a648bd
+          token: ${{ secrets.TokenForGistCreation }}
           # Set id of the gist to be updated.
-          gist_id: 6d13dd6e8268d846bf555017dc3508d9
+          gist_id: ${{secrets.GIST_ID}}
           # Set a file name in the gist.
           gist_file_name: IPTV.m3u # optional
           # Set path of the file to be deployed
