@@ -11,3 +11,16 @@ jobs:
       - name: Download
         run: |
           wget -O IPTV.m3u http://m3u4u.com/m3u/x79znkermetgpvkngk24
+      - name: Deploy to Gist
+        # You may pin to the exact commit or the version.
+        # uses: exuanbo/actions-deploy-gist@1d61dd4ed81eec7962a37d58881280984eb52ab7
+        uses: 6d13dd6e8268d846bf555017dc3508d9
+        with:
+          # Set a generated TOKEN for updating gist.
+          token: 88067b4f8b385591eb44bee62334e74570a648bd
+          # Set id of the gist to be updated.
+          gist_id: 6d13dd6e8268d846bf555017dc3508d9
+          # Set a file name in the gist.
+          gist_file_name: IPTV.m3u # optional
+          # Set path of the file to be deployed
+          file_path: ./IPTV.m3u
