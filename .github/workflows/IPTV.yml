@@ -24,3 +24,28 @@ jobs:
           gist_file_name: IPTV.m3u # optional
           # Set path of the file to be deployed
           file_path: ./IPTV.m3u
+      - name: Remove IPTV.m3u
+        run: |
+          rm IPTV.m3u
+  download-epg:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download
+        run: |
+          wget -O EPG.xml http://m3u4u.com/xml/x79znkermetgpvkngk24
+      - name: Deploy to Gist
+        # You may pin to the exact commit or the version.
+        # uses: exuanbo/actions-deploy-gist@1d61dd4ed81eec7962a37d58881280984eb52ab7
+        uses: exuanbo/actions-deploy-gist@v1.0.3
+        with:
+          # Set a generated TOKEN for updating gist.
+          token: ${{ secrets.TokenForGistCreation }}
+          # Set id of the gist to be updated.
+          gist_id: ${{secrets.GIST_ID}}
+          # Set a file name in the gist.
+          gist_file_name: EPG.xml # optional
+          # Set path of the file to be deployed
+          file_path: ./EPG.xml
+      - name: Remove EPG.xml
+        run: |
+          rm EPG.xml
