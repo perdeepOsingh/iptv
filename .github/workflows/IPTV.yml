@@ -1,12 +1,9 @@
 name: Create-IPTV-Gist
 on:
   schedule:
-<<<<<<< Updated upstream:.github/workflows/IPTV.yml
-    - cron: "*/1 * * * *"
-=======
     - cron: "0 */6 * * *"
   workflow_dispatch:
->>>>>>> Stashed changes:.github/workflows/scheduled.yml
+
 jobs:
   download-updated-channels:
     runs-on: ubuntu-latest
